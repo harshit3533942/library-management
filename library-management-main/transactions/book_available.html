@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Book Available</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<script>
+
+function validateSearch(){
+
+let book=document.getElementById("book").value
+let author=document.getElementById("author").value
+
+if(book=="" && author==""){
+document.getElementById("error").innerText=
+"Please enter Book Name or Author"
+return false
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="nav">
+<a href="../dashboard.html">Dashboard</a>
+</div>
+
+<div class="container">
+
+<h2>Search Available Books</h2>
+
+<p id="error" style="color:red"></p>
+
+<form onsubmit="return validateSearch()">
+
+<label>Book Name</label>
+<input type="text" id="book">
+
+<label>Author</label>
+<input type="text" id="author">
+
+<button type="submit">Search</button>
+
+</form>
+
+<h3>Search Results</h3>
+
+<table border="1" width="100%">
+
+<tr>
+<th>Book</th>
+<th>Author</th>
+<th>Available</th>
+<th>Select</th>
+</tr>
+
+<tr>
+<td>Java Programming</td>
+<td>James</td>
+<td>Yes</td>
+<td><input type="radio" name="book"></td>
+</tr>
+
+<tr>
+<td>Python Basics</td>
+<td>John</td>
+<td>Yes</td>
+<td><input type="radio" name="book"></td>
+</tr>
+
+</table>
+
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

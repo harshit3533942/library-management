@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Update Book</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<script>
+function validateForm(){
+
+let title=document.getElementById("title").value
+let author=document.getElementById("author").value
+let serial=document.getElementById("serial").value
+
+if(title=="" || author=="" || serial==""){
+document.getElementById("error").innerText="All fields are mandatory"
+return false
+}
+
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="nav">
+<a href="../dashboard.html">Dashboard</a>
+<a href="add_book.html">Add Book</a>
+<a href="update_book.html">Update Book</a>
+</div>
+
+<div class="container">
+
+<h2>Update Book</h2>
+
+<p id="error" style="color:red"></p>
+
+<form onsubmit="return validateForm()">
+
+<label>Select Type</label><br>
+
+<input type="radio" name="type" checked> Book
+<input type="radio" name="type"> Movie
+
+<br><br>
+
+<label>Book Title</label>
+<input type="text" id="title">
+
+<label>Author Name</label>
+<input type="text" id="author">
+
+<label>Serial Number</label>
+<input type="text" id="serial">
+
+<button type="submit">Update Book</button>
+
+</form>
+
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

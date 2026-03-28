@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>User Management</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<script>
+function validateForm(){
+
+let name=document.getElementById("name").value
+
+if(name==""){
+document.getElementById("error").innerText="Name is mandatory"
+return false
+}
+
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="nav">
+<a href="../dashboard.html">Dashboard</a>
+</div>
+
+<div class="container">
+
+<h2>User Management</h2>
+
+<p id="error" style="color:red"></p>
+
+<form onsubmit="return validateForm()">
+
+<label>User Type</label><br>
+
+<input type="radio" name="type" checked> New User
+<br>
+<input type="radio" name="type"> Existing User
+
+<br><br>
+
+<label>Name</label>
+<input type="text" id="name">
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

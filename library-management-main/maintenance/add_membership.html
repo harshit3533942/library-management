@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Add Membership</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<script>
+function validateForm(){
+
+let name=document.getElementById("name").value
+
+if(name==""){
+document.getElementById("error").innerText="All fields are mandatory"
+return false
+}
+
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="nav">
+<a href="../dashboard.html">Dashboard</a>
+</div>
+
+<div class="container">
+
+<h2>Add Membership</h2>
+
+<p id="error" style="color:red"></p>
+
+<form onsubmit="return validateForm()">
+
+<label>Member Name</label>
+<input type="text" id="name">
+
+<label>Membership Duration</label><br>
+
+<input type="radio" name="duration" checked> 6 Months
+<br>
+<input type="radio" name="duration"> 1 Year
+<br>
+<input type="radio" name="duration"> 2 Years
+
+<br><br>
+
+<button type="submit">Add Membership</button>
+
+</form>
+
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>
