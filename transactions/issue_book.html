@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Issue Book</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<script>
+
+function validateIssue(){
+
+let book=document.getElementById("book").value
+let issue=document.getElementById("issueDate").value
+
+if(book=="" || issue==""){
+document.getElementById("error").innerText=
+"Book Name and Issue Date required"
+return false
+}
+
+}
+
+</script>
+
+</head>
+
+<body onload="setIssueDate()">
+
+<div class="nav">
+<a href="../dashboard.html">Dashboard</a>
+</div>
+
+<div class="container">
+
+<h2>Issue Book</h2>
+
+<p id="error" style="color:red"></p>
+
+<form onsubmit="return validateIssue()">
+
+<label>Book Name</label>
+<input type="text" id="book">
+
+<label>Author</label>
+<input type="text" value="Auto Filled Author" readonly>
+
+<label>Issue Date</label>
+<input type="date" id="issueDate" onchange="setReturnDate()">
+
+<label>Return Date</label>
+<input type="date" id="returnDate" readonly>
+
+<label>Remarks</label>
+<textarea></textarea>
+
+<button type="submit">Issue Book</button>
+
+</form>
+
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

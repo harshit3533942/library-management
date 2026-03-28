@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Return Book</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<script>
+
+function validateReturn(){
+
+let book=document.getElementById("book").value
+let serial=document.getElementById("serial").value
+
+if(book=="" || serial==""){
+document.getElementById("error").innerText=
+"Book Name and Serial Number required"
+return false
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="nav">
+<a href="../dashboard.html">Dashboard</a>
+</div>
+
+<div class="container">
+
+<h2>Return Book</h2>
+
+<p id="error" style="color:red"></p>
+
+<form action="pay_fine.html" onsubmit="return validateReturn()">
+
+<label>Book Name</label>
+<input type="text" id="book">
+
+<label>Author</label>
+<input type="text" value="Auto Filled Author" readonly>
+
+<label>Serial Number</label>
+<input type="text" id="serial">
+
+<label>Issue Date</label>
+<input type="date" readonly>
+
+<label>Return Date</label>
+<input type="date">
+
+<button type="submit">Confirm Return</button>
+
+</form>
+
+</div>
+<script src="../js/script.js"></script>
+
+</body>
+
+</html>

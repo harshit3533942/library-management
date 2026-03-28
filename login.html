@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Library Login</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Library Management System</h2>
+
+<form action="dashboard.html" onsubmit="return loginUser()">
+
+<label>Username</label>
+<input type="text" name="username" required>
+
+<label>Password</label>
+<input type="password" name="password" required>
+
+<label>Select Role</label>
+
+<div class="role-option">
+    <input type="radio" name="role" value="admin" required>
+    <label>Admin</label>
+</div>
+
+<div class="role-option">
+    <input type="radio" name="role" value="user">
+    <label>User</label>
+</div>
+
+<br><br>
+
+<button type="submit">Login</button>
+
+</form>
+
+</div>
+<script src="js/script.js"></script>
+
+</body>
+</html>

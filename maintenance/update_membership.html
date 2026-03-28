@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Update Membership</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<script>
+function validateForm(){
+
+let id=document.getElementById("memberid").value
+
+if(id==""){
+document.getElementById("error").innerText="Membership number is required"
+return false
+}
+
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="nav">
+<a href="../dashboard.html">Dashboard</a>
+</div>
+
+<div class="container">
+
+<h2>Update Membership</h2>
+
+<p id="error" style="color:red"></p>
+
+<form onsubmit="return validateForm()">
+
+<label>Membership Number</label>
+<input type="text" id="memberid">
+
+<label>Action</label><br>
+
+<input type="radio" name="action" checked> Extend Membership
+<br>
+<input type="radio" name="action"> Cancel Membership
+
+<br><br>
+
+<button type="submit">Update</button>
+
+</form>
+
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

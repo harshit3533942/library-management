@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Open Library Management",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:5500/login.html",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "Serve Library Management (Python)"
+    }
+  ]
+}
