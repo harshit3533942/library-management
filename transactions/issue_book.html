@@ -10,7 +10,7 @@
 function validateIssue(){
 
 let book=document.getElementById("book").value
-let issue=document.getElementById("issue").value
+let issue=document.getElementById("issueDate").value
 
 if(book=="" || issue==""){
 document.getElementById("error").innerText=
@@ -24,7 +24,7 @@ return false
 
 </head>
 
-<body>
+<body onload="setIssueDate()">
 
 <div class="nav">
 <a href="../dashboard.html">Dashboard</a>
@@ -45,10 +45,10 @@ return false
 <input type="text" value="Auto Filled Author" readonly>
 
 <label>Issue Date</label>
-<input type="date" id="issue">
+<input type="date" id="issueDate" onchange="setReturnDate()">
 
 <label>Return Date</label>
-<input type="date">
+<input type="date" id="returnDate" readonly>
 
 <label>Remarks</label>
 <textarea></textarea>
